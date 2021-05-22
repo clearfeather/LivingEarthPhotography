@@ -1,0 +1,110 @@
+//Photos/Portfolio Section/Container
+.portfolio {
+    //Set background dark
+    background: rgba($color: #0E130C, $alpha: .95);
+    //Fix overflow from wide margin of H1
+    overflow-x: hidden;
+
+    //Section padding
+    @include section-spacing;
+
+    .latest-works, .sub-cat {
+        //Set maximum width for large screens (keeping background in tact)
+        @include section-max-sizing;
+    }
+
+    //Animals and Landscapes to display side by side on larger screens
+    .sub-cat {
+        @media only screen and (min-width: 930px) {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+    
+    //Title
+    h1 {
+        //Import H1 Section Title
+        @include section-h1;
+        //Override color
+        color:rgba($color: #FFF, $alpha: .9);
+        //Add background shade
+        background: rgba($color: #FFF, $alpha: .05);
+        padding: 2rem 0;
+        //Extend background shade to both sides
+        margin: 0 -9999rem;
+    }
+
+    //Portfolio images
+    .slideshow {
+        //Set Flex with wrap, center items
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        
+        //Setting margins
+        margin: 3rem 0;
+
+        @media only screen and (min-width: 640px) and (max-width: 929px) {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: auto auto 100% 100%;
+            justify-content: center;
+        }
+
+        //Shorten up margin on last group
+        &:nth-last-of-type(1) {
+            margin-bottom: 0rem;
+        }
+
+        //Each portoflio picture
+        img {
+            //Set width and 1:1 ratio
+            width: 13rem;
+            height: 13rem;
+            //Margins
+            margin: 0 .75rem 1.5rem;
+            //Style and cover fit
+            border-radius: .5rem;
+            object-fit: cover;
+            border: 1px solid rgba($color: #FFF, $alpha: 0);
+            transition: all ease-in-out .3s;
+
+            @media only screen and (min-width: 640px) and (max-width: 929px) {
+                justify-self: center;
+            }
+
+            &:hover {
+                border: 1px solid white;
+                transform: scale(1.03);
+            }
+        }
+
+        //Contact text
+        .portfolio-contact {
+            width: 100%;
+            text-align: center;
+            
+            //Change to light white
+            a:link, a:visited {
+                color: rgba($color: #FFF, $alpha: .7); 
+            }
+            //Change to pure white on hover
+            a:hover {
+                color: #FFF;
+            }
+        }
+
+        .border-bottom {
+            border-bottom: 1px solid white;
+            width: 20rem;
+            margin: 3rem 0;
+        }
+
+        //Hide the bottom border item on desktop view
+        .hidedesk {
+            @media only screen and (min-width: 930px) {
+                display: none;
+                }
+        }
+    }
+}

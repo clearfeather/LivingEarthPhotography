@@ -1,0 +1,62 @@
+//Contact Form Element
+form {
+    margin-top: 3rem;
+    //Center the form and size together
+    max-width: 50rem;
+    margin: auto;
+
+    //Style text input elements
+    input[type=text],
+    input[type=email],
+    select,
+    textarea {
+        //Stretch boxes to fit all the way across
+        width: 100%;
+        opacity: .5;
+        max-width: 50rem;
+        padding: .75rem;
+        border: 1px solid #4F5953; //Updated border thickness for better design
+        border-radius: .25rem;
+        //Correct font for Message box
+        font-family: inherit;
+
+        //No opacity when field is selected for input
+        &:focus {
+            opacity: 1;
+        }
+
+    }
+
+    //Style labels
+    label {
+        display: inline-block;
+        width: 100%;
+        text-align: left;
+        margin: 1rem 0;
+    }
+
+    //Style Submit button
+    input[type=submit] {
+        display: block;
+        margin: auto;
+        padding: 1.25rem 4rem;
+        margin-top: 2rem;
+        font-size: 1.2rem;
+        color: #FFF;
+        background-color: #4F5953;
+        border: none;
+        border-radius: .5rem;
+        opacity: .8;
+        cursor: pointer;
+
+        &:hover {
+            opacity: 1;
+            transition: all .2s;
+        }
+    }
+
+    p {
+        font-size: 1rem;
+        margin-top: 2rem;
+    }
+}

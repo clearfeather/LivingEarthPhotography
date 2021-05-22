@@ -1,0 +1,168 @@
+//Extend background on both the about and connect/contact sections
+.about-connect {
+
+    position: relative;
+
+    //Align all content
+    text-align: center;
+
+    //Set background image for section
+    @include background-image("../img/unsplash/matheo-jbt-pLoal7b3-eI-unsplash-web.webp");
+
+    .about {
+
+        //Section padding
+        @include section-spacing;
+
+        //Set maximum width for large screens
+        @include section-max-sizing;
+
+        //Title
+        h1 {
+            //Import H1 Section Title
+            @include section-h1;
+        }
+
+        //Style each H2
+        h2 {
+            @include section-h2;
+            //Additional style overrides
+            text-align: center;
+            line-height: 1.75;
+            margin-bottom: 2rem;
+        }
+
+        //Style P content
+        p {
+            @include section-p;
+        }
+
+        //Scale each SVG image
+        img {
+            width: 35rem;
+            max-width: 100%;
+            height: 35rem;
+            object-fit: cover;
+            margin: 2rem 0;
+
+            @media only screen and (min-width: 768px) {
+                position: absolute;
+                left: 3rem;
+            }
+
+        }
+
+        //Contact item at the bottom
+        .contact {
+            @include contact-us;
+            text-align: center;
+
+            @media only screen and (min-width: 768px) {
+                margin-top: 3rem;
+                text-align: right;
+            }
+        }
+
+        .mobile {
+            @media only screen and (min-width: 768px) {
+                display: none;
+            }
+        }
+
+        .desk {
+            @media only screen and (max-width: 767px) {
+                display: none;
+            }
+        }
+
+        //Display side by side on larger screens
+        @media only screen and (min-width: 768px) {
+            display: flex;
+
+            .cat-side {
+                width: 50%;
+                position: relative;
+                min-height: 350px;
+
+                //Align all text to the right
+                h1,
+                h2,
+                p {
+                    text-align: right;
+                }
+
+                img {
+                    margin: 0 0;
+                }
+
+            }
+        }
+
+    }
+
+    .connect-back {
+
+        //Add some bottom padding to show background image
+        padding-bottom: 5rem;
+    }
+
+    .connect {
+
+        //Section padding
+        @include section-spacing;
+
+        //Limit width of section on large screens, and show white box on xl screens
+        @include section-max-sizing;
+
+        @media only screen and (min-width: 930px) {
+            display: flex;
+            flex-direction: row-reverse;
+
+            .cat-side {
+                width: 50%;
+                margin: 0 3rem;
+            }
+
+            .verbiage {
+                text-align: left;
+                margin-top: 3rem;
+
+                h1 {
+                    text-align: left;
+                }
+
+                p > strong {
+                    font-weight: 600;
+                    font-size: 1.65rem;
+                }
+            }
+
+            form {
+                input[type=submit] {
+                    margin-left: 0;
+                }
+                p {
+                    text-align: left;
+                }
+            }
+
+        }
+
+        //Style P content
+        p {
+            @include section-p;
+            margin: 2rem 0;
+        }
+
+        background: rgba($color: #FFF, $alpha: .75);
+        padding: 3rem;
+
+
+        //Title
+        h1 {
+            //Import H1 Section Title
+            @include section-h1;
+        }
+    }
+
+}

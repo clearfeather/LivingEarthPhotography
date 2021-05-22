@@ -1,0 +1,94 @@
+//Secton Titles
+@mixin section-h1 {
+    //Styling Heading (done by H1 in typography)
+    //opacity: .9; -enhanced design
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+@mixin section-spacing {
+    //More padding top/bottom and some left/right
+    padding: 9rem 3rem;
+}
+
+@mixin section-max-sizing {
+    //Maximum Width for large screens
+    max-width: 200rem;
+    //Center the container content
+    margin: 0 auto;
+}
+
+@mixin section-h2 {
+    //Styling Heading (done by H2 in typography)
+}
+
+@mixin section-h3 {
+    //Styling Heading (done by H3 in typography)
+}
+
+@mixin section-p {
+    font-size: 1.5rem;
+    letter-spacing: .12rem;
+    word-spacing: .2rem;
+    line-height: 1.75;
+}
+
+@mixin contact-us {
+    //Style
+    font-size: 1.75rem;
+    letter-spacing: .12rem;
+    //Enable quick animation transition
+    transition: .2s;
+
+    //Move right 5px for animation
+    &:hover {
+        transform: translateX(5px);
+    }
+}
+
+@mixin background-image($file-loc) {
+    //Required for ::before / background setup
+    position: relative;
+
+    //Set Background image on underlying layer trick
+    &::before {
+        //Required empty content
+        content: "";
+        //Set entire container fitment and position
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        z-index: -2;
+        //Background image and style
+        background: url($file-loc) no-repeat;
+        opacity: .1;
+        background-size: cover;
+        background-position: 40% 50%;
+    }
+}
+
+//Social Media Buttons
+@mixin social-buttons {
+    //Social buttons containing box, set height
+    height: 10%;
+    //Correct uneven alignment by using flex
+    display: flex;
+    justify-content: center;
+
+    img {
+        //Style buttons
+        opacity: .8;
+        //Scale icons to the same size
+        width: 2rem;
+        //Spacing between icons
+        margin: 0 .5rem;
+
+        &:hover {
+            //Style on hover
+            cursor: pointer;
+            opacity: 1;
+        }
+    }
+}

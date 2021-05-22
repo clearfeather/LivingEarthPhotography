@@ -1,0 +1,65 @@
+//Services Section/Container
+.services {
+
+    //Section padding
+    @include section-spacing;
+
+    //Set background image for section
+    @include background-image("../img/unsplash/ales-krivec-4miBe6zg5r0-unsplash-web.webp");
+
+    //Title
+    h1 {
+        //Import H1 Section Title
+        @include section-h1;
+    }
+
+    //Services Items set to Flex & Wrap
+    .services-list {
+        display: flex;
+        flex-wrap: wrap;
+
+        //Set maximum width for large screens
+        @include section-max-sizing;
+
+        //Each flexbox box
+        .item {
+            padding: 3rem 0;
+            width: 100%;
+
+            @media only screen and (min-width: 768px){
+                width: 50%;
+            }
+
+            //Scale each SVG image
+            img {
+                width: 4rem;
+                
+            }
+
+            //Style each H2
+            h2 {
+                @include section-h2;
+            }
+        
+            //Style P content
+            p {
+                @include section-p;
+            }
+
+        }
+
+        //Make Contact Us button centered (when 768px+), does not apply for mobile due to already 100%
+        :nth-last-child(1){
+            flex-basis: 100%;
+        }
+
+        //Contact item at the bottom
+        .contact {
+            @include contact-us;
+
+            @media only screen and (min-width: 768px){
+                text-align: center;
+            }
+        }
+    }
+}

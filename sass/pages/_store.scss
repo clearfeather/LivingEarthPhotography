@@ -1,0 +1,44 @@
+//Storefront Area
+.storefront {
+
+    //Section padding
+    @include section-spacing;
+
+    //Ensure each item it on it's own line
+    display: flex;
+    flex-wrap: wrap;
+
+    //Set each item to full width on larger screens
+    > * {
+        width: 100%;
+    }
+
+    //Align all content
+    text-align: center;
+
+    //Title
+    h1 {
+        //Import H1 Section Title
+        @include section-h1;
+    }
+
+    //Fine Art America Logo
+    .faa {
+        width: 25rem;
+        height: auto;
+        margin: 2rem auto .5rem;
+    }
+
+    //Fine Art Store Capture Pic
+    .faa-capture {
+        width: 100%;
+        max-width: 50rem;
+        margin: 2rem auto;
+    }
+
+    //Visit button
+    .visitfaa {
+        @include contact-us;
+    }
+
+}

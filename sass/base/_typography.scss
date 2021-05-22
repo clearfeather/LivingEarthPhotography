@@ -1,0 +1,43 @@
+/* Copyright Clearfeather Design Productions */
+
+//Reset Font scaling to match 1rem = 10px to use REM (Scalable) instead of PX (Non-Scalable)
+html {
+    font-size: 62.5%;
+  }
+
+//Set entire site Font Style
+body {
+    font-family: 'Segoe UI', sans-serif;
+    color: #575757;
+    font-size: 1.6rem;
+
+    //Link Style
+    a:link, a:visited {
+        color: #575757; 
+        text-decoration: none;
+    }
+}
+
+//Default H tags before overrides
+
+h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .5rem;
+}
+
+h2 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    line-height: 2.5;
+}
+
+h3 {
+    text-transform: uppercase;
+    font-size: 1.5rem;  //Sized up higher than original design
+    font-weight: 600;
+    letter-spacing: -.025rem;
+    padding: 0 0 2rem;
+}

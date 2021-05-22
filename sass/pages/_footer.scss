@@ -1,0 +1,117 @@
+//Footer
+footer {
+
+    //Section padding
+    @include section-spacing;
+
+    //Set background image for section
+    background-color: rgba($color: #4F5953, $alpha: .8);
+    @include background-image("../img/unsplash/vincent-van-zalinge-jj2ab1xIxrg-unsplash-web.webp");
+
+    &::before {
+        opacity: .8;
+    }
+
+    //Enable Flexbox
+    display: flex;
+    flex-direction: column;
+
+    @media only screen and (min-width: 930px) {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    //Set font color to white
+    color: #FFF;
+
+    //Style Each Group
+    .f-group {
+        margin: 2rem 5rem;
+
+        //Set first box with less top margin to move up a bit
+        @media only screen and (max-width: 929px) {
+            &:nth-of-type(1) {
+                margin-top: -3rem;
+            }
+        }
+    }
+
+    //H3 Style
+    @include section-h3;
+
+    //Style links (list items)
+    li {
+        font-size: 1.5rem;
+        padding: .5rem 0;
+    }
+
+    //Link Style override for footer
+    a:link,
+    a:visited {
+        color: #FFF;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    //Social Buttons Box
+    .social-buttons {
+        @include social-buttons;
+        //Postion to left instead of center (override)
+        justify-content: left;
+
+        //Scale icons down a bit
+        img {
+            width: 1.7rem;
+        }
+    }
+
+    //Sign-up top bit
+    .sign-up {
+        font-size: 1.5rem;
+        color: rgba($color: #FFF, $alpha: .8)
+    }
+
+    //Email entry
+
+    form {
+        //Un-center the footer email entry form
+        margin: auto 0;
+    }
+
+    input[type=email] {
+        //Overrides from forms scss
+        margin-top: 2rem;
+        opacity: .9;
+        color: #FFF;
+        background: rgba($color: #FFF, $alpha: 0);
+        border: 1px solid #FFF;
+        border-radius: .25rem;
+
+        //No opacity when field is selected for input
+        &:focus {
+            opacity: 1;
+        }
+    }
+
+    //Submit button overrides from forms scss
+    input[type=submit] {
+        display: block;
+        margin: 2rem 0;
+        color: #4F5953;
+        background-color: #FFF;
+        opacity: .9;
+
+        &:hover {
+            opacity: 1;
+            transition: all .2s;
+        }
+    }
+
+    .copyright {
+        font-size: 1rem;
+        padding-top: 2rem;
+    }
+
+}

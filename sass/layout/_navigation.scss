@@ -1,0 +1,72 @@
+//Set smooth scroll with same page # links
+html {
+    scroll-behavior: smooth;
+  }
+
+//Links default to hidden until buttton clicked
+#navLinks {
+    
+    display: none;  //Swap between hide/none to flex/show, default hide menu
+    margin-top: 20vh;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80vh;
+    //Set maximum width for large screens
+    max-width: 75rem;
+    
+
+    @media only screen and (min-width: 768px) {
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-end;
+        position: inherit;
+        align-items: flex-end;
+        margin-right: 2rem;
+        margin-top: 0;
+        height: 100%;
+        opacity: .8;
+    }
+
+    a {
+        font-size: 2rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: .5rem;
+        opacity: .8;
+        margin-bottom: 2rem;
+        color: white;
+
+        //Enable Animation on parent
+        transition: .2s;
+
+        &:hover {
+            transform: translateY(-1px);
+            transform: scale(1.05);
+            opacity: 1;
+        }
+
+        @media only screen and (min-width: 768px) {
+            font-size: 1.1rem;
+            
+            text-transform: uppercase;
+            letter-spacing: .2rem;
+            opacity: .7;
+            color: #000;
+
+            &:hover {
+                opacity: 1;
+                transform: none;
+                
+            }
+        }
+    }
+}
