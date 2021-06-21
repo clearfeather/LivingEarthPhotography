@@ -1,5 +1,4 @@
 # Photography Sample website 
-[View Live Demo](https://clearfeather.github.io/LivingEarthPhotography/)
+💻 [View Live Demo](https://clearfeather.github.io/LivingEarthPhotography/)
 
-#### by Clearfeather.com - 2020
-###### All vanilla code
+###### by [Clearfeather.com](https://clearfeather.com),  built in 2020, all vanilla code
