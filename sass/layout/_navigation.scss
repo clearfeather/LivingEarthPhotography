@@ -1,11 +1,11 @@
-//Set smooth scroll with same page # links
+//Set smooth scroll with same page # links (does not work on safari as of 2020 release)
 html {
     scroll-behavior: smooth;
   }
 
-//Links default to hidden until buttton clicked
+//Mobile links default to hidden until buttton clicked
 #navLinks {
-    
+
     display: none;  //Swap between hide/none to flex/show, default hide menu
     margin-top: 20vh;
     flex-wrap: wrap;
@@ -43,7 +43,6 @@ html {
         letter-spacing: .5rem;
         opacity: .8;
         margin-bottom: 2rem;
-        color: white;
 
         //Enable Animation on parent
         transition: .2s;

@@ -109,7 +109,7 @@ header {
         height: 80vh;
         width: 100%;
         //Background color overlay
-        background: rgba($color: #000, $alpha: .5);
+        background: rgba($color: #000, $alpha: 0.5);
 
         @media only screen and (min-width: 768px) {
             height: 50rem;
@@ -210,6 +210,11 @@ header {
             }
 
         }
+    }
+
+    //Background color update from toggle (mobileMenu.js)
+    .menuBackground {
+        background: rgba($color: #FFFBF6, $alpha: 0.85);
     }
 
     @media only screen and (min-width: 768px) {
