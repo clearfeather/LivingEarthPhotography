@@ -3,15 +3,15 @@ function mobileMenu() {
     //Set Variables for each class style
 
     //Navigation Menu
-    const navLinks = document.getElementById("navLinks");
+    const navLinks = document.querySelector("#navLinks");
 
     //Middle sections
     //var middleMain = document.getElementsByClassName("middle")[0];
     //middleMain.classList.toggle("menuBackground")[0];
     
-    const middleTitle = document.getElementsByClassName("title")[0];
-    const middleButton = document.getElementsByClassName("button")[0];
-    const middleSocial = document.getElementsByClassName("social-buttons")[0];
+    const middleTitle = document.querySelector(".title");
+    const middleButton = document.querySelector(".button");
+    const middleSocial = document.querySelector(".social-buttons");
     
     
     //Hiding the menu, display middle header
